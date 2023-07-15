@@ -26,7 +26,7 @@ def classification(data, clf, text):
     text[0] = text[0].lower()
     s = (vectorizer.transform(text))
     d = (clf.predict(s))
-    genre_answer = le.inverse_transform([0])[0]
+    genre_answer = le.inverse_transform(d)[0]
     return genre_answer
 
 if __name__ == "__main__":
