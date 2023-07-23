@@ -1,4 +1,4 @@
-*.pkl
+#*.pkl
 *.yaml
 *.pt
 *.bin
