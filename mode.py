@@ -7,7 +7,7 @@ with open('classification/label_encoder.pkl', 'rb') as f:
     le = pickle.load(f)
 
 tokenizer = BertTokenizerFast.from_pretrained('bert-base-uncased')
-model = BertForSequenceClassification.from_pretrained('classification/last_model', num_labels=32)
+model = BertForSequenceClassification.from_pretrained('gyubinc/bert-book32-gyubin', num_labels=32)
 
 
 if __name__ == "__main__":
