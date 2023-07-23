@@ -15,5 +15,5 @@ if __name__ == "__main__":
     text = "He died yesterday"
 
     # 텍스트의 장르 예측
-    predicted_genres = predict_genre(text, model, tokenizer, le, k=1)  # 'le'를 사용하셔야 합니다.
-    print(predicted_genres)
+    music_genre = predict_genre(text, model, tokenizer, le, k=1)  # 'le'를 사용하셔야 합니다.
+    print(music_genre)
