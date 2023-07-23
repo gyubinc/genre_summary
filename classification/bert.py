@@ -65,16 +65,10 @@ def predict_genre(text, model, tokenizer, label_encoder, k=3):
     
     if k == 1:
         music_genre = label_dict[predicted_labels[0]]
+        rand = np.random.choice(music_genre, size=2, replace=False)
         print(f'예상 book genre = {predicted_labels[0]}')
         print(f'해당 book genre에 대한 음악 genre = {music_genre}')
-        return predicted_labels[0]
+        print(f'random한 2개 요소 = {rand}')
+        return rand
     
     return predicted_labels  # 결과가 리스트인데 첫 번째 요소만 반환합니다.
-
-if __name__ == "__main__":
-    # 예제 텍스트
-    text = "He died yesterday"
-
-    # 텍스트의 장르 예측
-    predicted_genres = predict_genre(text, model, tokenizer, le, k=1)  # 'le'를 사용하셔야 합니다.
-    print(predicted_genres)
